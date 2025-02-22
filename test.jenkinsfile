@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'windows' } // Вказуємо віддалений Windows-агент
+    agent { label 'any' } // Вказуємо віддалений Windows-агент
 
     stages {
         stage('Get Hostname') {

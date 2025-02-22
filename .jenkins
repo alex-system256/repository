@@ -1,0 +1,15 @@
+pipeline {
+    agent { label 'windows' } // Вказуємо віддалений Windows-агент
+
+    stages {
+        stage('Get Hostname') {
+            steps {
+                script {
+                    echo "Отримання імені хоста..."
+                }
+                bat 'hostname'  // Виконуємо команду в Windows CMD
+            }
+        }
+    }
+}
+
